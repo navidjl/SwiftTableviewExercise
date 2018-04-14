@@ -13,7 +13,6 @@
         <!--Customers-->
         <scene sceneID="Tsz-Ut-WWL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="55Z-kA-76z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qll-7d-rTs" customClass="CustomerTableViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7UZ-QS-PiX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -42,14 +41,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55Z-kA-76z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="-143"/>
         </scene>
         <!--Customer Detail View Controller-->
         <scene sceneID="Ird-rq-vsj">
             <objects>
-                <exit id="USf-cq-5Mr" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPA-Ug-diG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AxV-Ao-GoZ" customClass="CustomerDetailViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WFw-BM-64e"/>
@@ -70,11 +68,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add Car" id="6ex-Dl-cMe">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="2nF-X7-u18">
-                                            <connections>
-                                                <segue destination="USf-cq-5Mr" kind="unwind" unwindAction="editWithSegue:" id="rqO-3K-E2n"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="jvk-cJ-A0A">
                                             <connections>
                                                 <segue destination="USf-cq-5Mr" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="3kg-xY-AGi"/>
@@ -91,13 +84,14 @@
                         <outlet property="customerName" destination="jrO-Qt-rjL" id="GoR-P7-a2h"/>
                     </connections>
                 </viewController>
+                <exit id="USf-cq-5Mr" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPA-Ug-diG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1983" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uhP-zi-qD2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nza-rk-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AFc-eW-jWz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IjJ-x3-SdG">
@@ -109,47 +103,9 @@
                         <segue destination="qll-7d-rTs" kind="relationship" relationship="rootViewController" id="aeZ-Iw-hxj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nza-rk-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="310" y="159"/>
-        </scene>
-        <!--Customer List View Controller-->
-        <scene sceneID="igX-2U-Anu">
-            <objects>
-                <viewController id="1SH-KJ-eBS" customClass="CustomerListViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kl8-Xm-pem"/>
-                        <viewControllerLayoutGuide type="bottom" id="rXt-pz-A4F"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="G6b-aC-uOQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MnY-n5-VMh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="1SH-KJ-eBS" id="zhe-NK-4yH"/>
-                                    <outlet property="delegate" destination="1SH-KJ-eBS" id="PYQ-l2-aRa"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="MnY-n5-VMh" firstAttribute="leading" secondItem="G6b-aC-uOQ" secondAttribute="leading" id="RJ4-4G-GyG"/>
-                            <constraint firstItem="rXt-pz-A4F" firstAttribute="top" secondItem="MnY-n5-VMh" secondAttribute="bottom" id="VoY-H1-nhJ"/>
-                            <constraint firstItem="MnY-n5-VMh" firstAttribute="top" secondItem="G6b-aC-uOQ" secondAttribute="top" id="WMh-vi-EIH"/>
-                            <constraint firstAttribute="trailing" secondItem="MnY-n5-VMh" secondAttribute="trailing" id="wLA-c3-f6Y"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ARW-5I-GyW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vVh-mi-04c"/>
-                    <connections>
-                        <outlet property="tableView" destination="MnY-n5-VMh" id="mcF-3i-Qrg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5AF-wD-NLD" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="756" y="848"/>
         </scene>
     </scenes>
 </document>
