@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6E658DB020822FE700D6ECE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E658DAF20822FE700D6ECE3 /* AppDelegate.swift */; };
-		6E658DB220822FE700D6ECE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E658DB120822FE700D6ECE3 /* ViewController.swift */; };
 		6E658DB520822FE700D6ECE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E658DB320822FE700D6ECE3 /* Main.storyboard */; };
 		6E658DB720822FE700D6ECE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E658DB620822FE700D6ECE3 /* Assets.xcassets */; };
 		6E658DBA20822FE700D6ECE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E658DB820822FE700D6ECE3 /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		6E658DAC20822FE700D6ECE3 /* SwiftExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E658DAF20822FE700D6ECE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E658DB120822FE700D6ECE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E658DB420822FE700D6ECE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E658DB620822FE700D6ECE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E658DB920822FE700D6ECE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				6E658DE3208290CC00D6ECE3 /* ListItem.swift */,
 				6E658DE1208290AF00D6ECE3 /* TableViewCell.swift */,
 				6E658DAF20822FE700D6ECE3 /* AppDelegate.swift */,
-				6E658DB120822FE700D6ECE3 /* ViewController.swift */,
 				6E658DB320822FE700D6ECE3 /* Main.storyboard */,
 				6E658DB620822FE700D6ECE3 /* Assets.xcassets */,
 				6E658DB820822FE700D6ECE3 /* LaunchScreen.storyboard */,
@@ -274,7 +271,6 @@
 				6E658DE4208290CC00D6ECE3 /* ListItem.swift in Sources */,
 				6E658DE2208290AF00D6ECE3 /* TableViewCell.swift in Sources */,
 				6E658DE0208230D800D6ECE3 /* CustomerListViewController.swift in Sources */,
-				6E658DB220822FE700D6ECE3 /* ViewController.swift in Sources */,
 				6E658DB020822FE700D6ECE3 /* AppDelegate.swift in Sources */,
 				6E658DDE208230C200D6ECE3 /* CustomerDetailViewController.swift in Sources */,
 			);
