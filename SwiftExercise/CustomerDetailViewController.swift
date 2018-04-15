@@ -14,7 +14,8 @@ class CustomerDetailViewController: UIViewController {
     var name: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isTranslucent=false
+        self.navigationController?.navigationBar.clipsToBounds = false
         // Do any additional setup after loading the view.
     }
     
@@ -25,8 +26,11 @@ class CustomerDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
-            print("preparedoneSegue")
+        
+        if !customerName.text!.isEmpty {
             name = customerName.text!
+        }
     
     }
+    
 }

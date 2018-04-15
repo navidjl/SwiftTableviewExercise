@@ -1,9 +1,9 @@
 //
-//  ListItem.swift
-//  edit text on tap
+//  AppDelegate.swift
+//  SwiftExercise
 //
-//  Created by Apoorv Mote on 04/10/15.
-//  Copyright © 2015 Apoorv Mote. All rights reserved.
+//  Created by Navid Jalili on 2018-04-14.
+//  Copyright © 2018 navidjalili. All rights reserved.
 //
 
 import UIKit

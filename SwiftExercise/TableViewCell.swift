@@ -1,11 +1,10 @@
 //
-//  TableViewCell.swift
-//  edit text on tap
+//  AppDelegate.swift
+//  SwiftExercise
 //
-//  Created by Apoorv Mote on 04/10/15.
-//  Copyright © 2015 Apoorv Mote. All rights reserved.
+//  Created by Navid Jalili on 2018-04-14.
+//  Copyright © 2018 navidjalili. All rights reserved.
 //
-
 import UIKit
 
 class TableViewCell: UITableViewCell, UITextFieldDelegate {
@@ -20,16 +19,14 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
 
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        // 1
+
         label = UITextField(frame: CGRect.null)
         label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 16)
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        // 2
         label.delegate = self
         label.contentVerticalAlignment = UIControlContentVerticalAlignment.center
-        // 3
         addSubview(label)
         
     }
