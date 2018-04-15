@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,17 +58,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-Qt-rjL">
-                                <rect key="frame" x="16" y="108" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hS-zf-8cI">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hS-zf-8cI">
                                 <rect key="frame" x="0.0" y="38" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Add Car" id="6ex-Dl-cMe">
+                                    <navigationItem title="Add Customer" id="6ex-Dl-cMe">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="jvk-cJ-A0A">
                                             <connections>
                                                 <segue destination="USf-cq-5Mr" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="3kg-xY-AGi"/>
@@ -76,8 +70,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-Qt-rjL">
+                                <rect key="frame" x="16" y="115" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6hS-zf-8cI" firstAttribute="leading" secondItem="8Jq-j8-ZR0" secondAttribute="leading" id="1iE-9X-FOr"/>
+                            <constraint firstItem="jrO-Qt-rjL" firstAttribute="top" secondItem="6hS-zf-8cI" secondAttribute="bottom" constant="33" id="FQb-yR-mzv"/>
+                            <constraint firstItem="6hS-zf-8cI" firstAttribute="top" secondItem="WFw-BM-64e" secondAttribute="bottom" constant="18" id="Flu-eN-bpm"/>
+                            <constraint firstItem="jrO-Qt-rjL" firstAttribute="leading" secondItem="SSZ-Th-jNU" secondAttribute="leadingMargin" id="SYY-vF-Ifu"/>
+                            <constraint firstAttribute="trailing" secondItem="6hS-zf-8cI" secondAttribute="trailing" id="XfD-0G-uba"/>
+                            <constraint firstItem="8Jq-j8-ZR0" firstAttribute="trailing" secondItem="jrO-Qt-rjL" secondAttribute="trailing" constant="71" id="mnp-ZO-BxM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Jq-j8-ZR0"/>
                     </view>
                     <connections>
