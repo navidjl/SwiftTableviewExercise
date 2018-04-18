@@ -6,7 +6,6 @@
 //  Copyright © 2018 navidjalili. All rights reserved.
 //
 
-
 import UIKit
 import Firebase
 class AddViewController: UIViewController {
@@ -82,7 +81,12 @@ class AddViewController: UIViewController {
             "email": emailText.text,
         ]
         
-        ref.child("users").child(id).setValue(data)
+        var uuid = getUUID()
+        if (id != "") {
+            uuid = id
+        }
+        
+        ref.child("users").child(uuid).setValue(data)
         
         navigationController?.popViewController(animated: false)
     }
@@ -98,5 +102,10 @@ class AddViewController: UIViewController {
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
+    }
+    
+    func getUUID() -> String {
+        let uuid = UUID().uuidString
+        return (uuid)
     }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2018 navidjalili. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 import MGSwipeTableCell
@@ -19,7 +20,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var data: [Any] = []
     
     var ref: DatabaseReference!
-    var maxID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref.child("users").observe(DataEventType.value, with: { (snapshot) in
 
             self.data = []
-            let value = snapshot.value as? NSArray
-            self.maxID = "\((value?.count)!)"
-            if (value?.count)! > 0 {
-                for i in 0...value!.count - 1 {
-                    if value![i] is NSNull {
-                        
-                    } else {
+            let value = snapshot.value as? NSDictionary
+            if (value != nil) {
+                if (value?.count)! > 0 {
+                    let keys = value!.allKeys
+                    
+                    for i in keys {
                         let val = value![i] as? NSDictionary
                         if val != nil {
                             let item = [
@@ -56,9 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.data.append(item)
                         }
                     }
-                    
                 }
-                
             }
             
             self.customerTableView.reloadData()
@@ -71,7 +68,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func tappedAddButton(_ sender: Any) {
         let vc =  self.storyboard?.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
         vc.state = 0
-        vc.id = maxID
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
