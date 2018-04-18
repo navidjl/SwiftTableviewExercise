@@ -1,0 +1,6 @@
+framework module Pods_CustomerTable {
+  umbrella header "Pods-CustomerTable-umbrella.h"
+
+  export *
+  module * { export * }
+}
