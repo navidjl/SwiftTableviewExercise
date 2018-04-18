@@ -14,4 +14,10 @@ target 'CustomerTable' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
 
+target 'CustomerTableTests' do
+        inherit! :search_paths
+        pod 'Firebase'
+    end
+
+
 end
